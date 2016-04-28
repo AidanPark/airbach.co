@@ -27,8 +27,8 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.sk.vas.tshare.test"
-        minSdkVersion 16
+        applicationId "com.airbach.m"
+        minSdkVersion 14
         targetSdkVersion 23
         versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}${versionPatch}${versionBuild}"
@@ -51,30 +51,30 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.3.0'
     /**
-     * for rxandroid
+     *   for rxandroid
      */
     compile 'io.reactivex:rxandroid:1.1.0'
     /**
-     * rxandroid는 메모리 누수에 대한 문제점이 있는데
-     * Observable이 Context를 복사해서 유지하고 있기 때문에 엑티비티가 종료될 때 unsubscribe하지 않으면 안된다.
-     * 명시적으로 onPause 나 onDestory에 Subscription의 unsubscribe()를 호출하도록 되어 있지만
-     * 서드파티 라이브러리(RxLifecycle)를 사용해서 적용하도록 한다.
+     *   rxandroid는 메모리 누수에 대한 문제점이 있는데
+     *   Observable이 Context를 복사해서 유지하고 있기 때문에 엑티비티가 종료될 때 unsubscribe하지 않으면 안된다.
+     *   명시적으로 onPause 나 onDestory에 Subscription의 unsubscribe()를 호출하도록 되어 있지만
+     *   서드파티 라이브러리(RxLifecycle)를 사용해서 적용하도록 한다.
      */
     compile 'com.trello:rxlifecycle:0.5.0'
     compile 'com.trello:rxlifecycle-components:0.5.0'
     /**
-     * for RetroLamda
+     *   for RetroLamda
      */
     compile 'me.tatarka:gradle-retrolambda:3.3.0-beta4'
     /**
-     * for code injection
+     *   for code injection
      */
     compile 'com.jakewharton:butterknife:7.0.1'
     /**
-     * for retrofit
+     *   for retrofit
      */
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
@@ -82,4 +82,6 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.2.0'
     compile 'com.squareup.okhttp3:okhttp-urlconnection:3.2.0'
     compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
+    compile files('libs/acra-4.5.0.jar')
+    compile files('libs/android-support-v4.jar')
 }

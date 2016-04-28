@@ -2,19 +2,51 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.airbach.m">
 
+    <!--PROTECTION_NORMAL-->
+    <!-- 통신 -->
+    <permission
+        android:name="android.permission.INTERNET"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--PROTECTION_NORMAL-->
+    <!-- WallPaper -->
+    <permission
+        android:name="android.permission.SET_WALLPAPER"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+
     <application
+        android:name=".AR"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SettingsActivity">
+
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:label="@string/title_activity_settings">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".live.WallPaperService"
+            android:enabled="true"
+            android:icon="@drawable/icon"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter android:priority="1">
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+            <meta-data android:name="android.service.wallpaper" android:resource="@xml/wallpaper" />
+        </service>
+
     </application>
 
 </manifest>

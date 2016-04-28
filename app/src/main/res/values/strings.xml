@@ -1,3 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY appname "AirBach">
+    <!ENTITY yes "예">
+    <!ENTITY no "아니오">
+    <!ENTITY agree "동의">
+    <!ENTITY deny "거부">
+    <!ENTITY confirm "확인">
+    <!ENTITY cancel "취소">
+    <!ENTITY retry "재시도">
+    ]>
+
 <resources>
-    <string name="app_name">com.airbach.m</string>
+    <string name="app_name">&appname;</string>
+
+    <!-- ACRA -->
+    <string name="acra_crash_toast_text">&appname; 오류를 리포트 합니다.\nG-Mail을 이용해 주세요.</string>
+
+    <!-- SettingsActivity -->
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="pref_title_enable_airbach_wallpaper">Enable AirBach Live Wallpaper</string>
+
+    <string name="pref_title_airbach_wallpaper_chart">AirBach Wallpaper Chart</string>
+    <string-array name="pref_list_titles_airbach_wallpaper_chart">
+        <item>daum idol top 100</item>
+        <item>daum kpop top 100</item>
+        <item>melon realtime top 100</item>
+        <item>melon daily top 100</item>
+        <item>bugs realtime top 100</item>
+        <item>bugs daily top 100</item>
+        <item>billboard hot 100</item>
+    </string-array>
+    <string-array name="pref_list_values_airbach_wallpaper_chart">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string name="pref_title_airbach_wallpaper_chart_sync_frequency">Chart Sync Frequency</string>
+    <string-array name="pref_list_titles_airbach_wallpaper_chart_sync_frequency">
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>24 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_list_values_airbach_wallpaper_chart_sync_frequency">
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>1440</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_plugin">Download Plugins</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- folder -->
+    <string name="dir">/.airbach/.albumart/</string>
+
+    <!-- user wallpaper dir -->
+    <string name="user_dir">/.airbach/.user/</string>
+    <string name="user_wallpaper">user_wallpaper</string>
+
+    <!-- common -->
+    <string name="info_update">update chart.</string>
+    <string name="dialog_network_fail">dialog_network_fail</string><!-- 데이타 통신 실패한 경우  -->
+    <string name="dialog_network_fail_msg">dialog_network_fail_msg</string><!-- 데이타 통신 실패한 경우의 메세지 -->
+    <string name="dialog_on_update_progress">dialog_on_update_progress</string><!-- 업데이트 실행중  -->
+    <string name="dialog_on_update_progress_msg">dialog_on_update_progress_msg</string><!-- 업데이트 실행중 메세지 -->
+
+    <!-- settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_enable">Enable AirBach</string>
+    <string name="settings_enable_fullscreen">Set album art as wallpaper</string>
+    <string name="settings_chart">Chart</string>
+    <string name="settings_chartupdate">Chart Update</string>
+    <string name="settings_plugins">Available plugIns</string>
+    <string name="settings_notices">Notices</string>
+    <string name="settings_version">Version</string>
+
+    <!-- dialog_enable -->
+    <string name="dialog_enable_title_enable">Set AirBach</string>
+    <string name="dialog_enable_msg_enable">Select \'AirBach\' for the activation</string>
+    <string name="dialog_enable_title_disable">Disable AirBach</string>
+    <string name="dialog_enable_msg_disable">Choose another one for disabled</string>
+
+    <!-- settings chart -->
+    <string name="settings_chart_kpop">Korea Chart</string>
+    <string name="settings_chart_kpop_daum_idol">Idol Top 100</string>
+    <string name="settings_chart_kpop_daum_kpop">Kpop Top 100</string>
+    <string name="settings_chart_kpop_melon_live">RealTime Top 100</string>
+    <string name="settings_chart_kpop_melon_daily">Daily Top 100</string>
+    <string name="settings_chart_jpop">Japan Chart</string>
+    <string name="settings_chart_uspop">US Chart</string>
+    <string name="settings_chart_ukpop">UK Chart</string>
+
+    <!-- settings chart update -->
+    <string name="settings_chartupdate_manual">Manual Update</string>
+    <string name="settings_chartupdate_interval_1">1 Hour</string>
+    <string name="settings_chartupdate_interval_2">2 Hours</string>
+    <string name="settings_chartupdate_interval_6">6 Hours</string>
+    <string name="settings_chartupdate_interval_24">24 Hours</string>
+
+    <!-- Main -->
+    <string name="format_ytstat">%1$s views, %2$s likes.</string>
+    <string name="format_fstat">%1$s, %2$s downloads.</string>
+
+    <string name="dialog_search_lyric">Search Lyric</string><!-- 가사검색  -->
+
+    <string name="info_down_succ">Successfully downloaded</string>
+    <string name="down_finished_open">Open</string>
+    <string name="down_finished_edit">Edit</string>
+    <string name="down_finished_set_ringtone">Set as ringtone</string>
+
+    <string name="label_chart_top">Top</string>
+    <string name="label_chart_start_hour">hr</string>
+    <string name="label_chart_start_day">d</string>
+    <string name="label_chart_now">Now</string>
+
+    <!-- notification -->
+    <string name="noti_down_completed">noti_down_completed</string>
+
+
+
+
+
 </resources>
